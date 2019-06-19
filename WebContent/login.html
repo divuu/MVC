@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<title>Slash Digital::Login</title>
+	<link href="images/ra_icon.ico" rel="icon" type="image/x-icon" sizes="64x64"/>
+	<script type="text/javascript" src="js/plugins/jquery-1.8.3.js"></script>
+	<script type="text/javascript" src="js/plugins/jquery.cookie.js"></script>
+	
+	 <style type="text/css">
+ 		body {
+			overflow: hidden;
+			font-family: Calibri;
+			width: 100%; height: 100%;
+			position: absolute;
+			padding: 0; margin: 0;
+			border: 0;
+			background-color: #ffffff;
+		}
+		table.wrapper {
+			overflow: hidden;
+			width: 100%; height: 100%;
+			border: 0;
+			border-collapse: collapse;
+		}
+		table.wrapper th, table.wrapper td{
+			padding:0;
+		}
+		th.rBanner{
+			margin:0;
+			height: 80px;
+			background-color: rgba(150,150,150, .4);
+		}
+		td.panel_head{
+			text-align: center;
+			min-width: 100%;
+			height:67px;
+			background-color: #FFB251;
+		}
+		td.panel_head > h3{
+			margin-top: 10px;
+			margin-bottom: 5px
+		}
+		td.panel_head > span{
+			display: block;
+			margin-bottom: 10px;
+		}
+		td.form_area{
+			min-height: 100%;
+			min-width: 100%;
+		}
+		div.form_Panel{
+			height: 100%;
+			width: 422px;
+			overflow: auto;
+			position: relative;
+			left:50%;
+			margin-left: -211px;
+		}
+		div.form_Panel table{
+			background-color: rgba(230,230,230,1);
+			padding: 10px;
+			margin-top: 20px;
+			border:1px solid #0094FF;
+			border-radius: 10px; 
+		}
+		div.form_Panel td{
+			padding-left: 15px;
+			padding-right: 15px;  
+		}
+		div.form_Panel .tbox{
+			width: 250px;
+			height: 25px;
+			margin-bottom: 6px; 
+			padding-left: 6px;
+		}
+		/* div.form_Panel .submitbtn{
+			text-align: left;
+		} */
+		input._submit{
+			width: 100px;
+			height: 30px;
+			margin-left: 34px;
+		}
+		div.form_Panel .ilbl{
+			font-family: Verdana;
+			color: #404040;
+			font-size: 13px;
+		}
+		div.form_Panel .hlbl{
+			font-family: Verdana;
+			color: #404040;
+			font-size: 14px;
+		}
+			
+		div.form_Panel .cantacess{
+			font: 12px/18px "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif; 
+		}
+		
+		
+		.rFooter{
+			width: 100%; height: 20px;
+			text-align: center;
+			
+			border-top: solid 1px #bbb;
+			background: #E5E5E5;
+			
+			text-shadow: 0px 1px 1px #404040;
+			color: #222;
+		}
+		.rFooter a{
+			text-decoration: none;
+			color: #222;
+		}
+		.hidden_elem{
+			display: none;
+		}
+	 
+	 	#forgot_password_form{
+	 		left: 50%;
+	 		top: 24%;
+	 		margin-left: -225px;
+	 		padding: 15px;
+	 		position: absolute;
+	 		z-index: 10;
+	 		background-color: rgba(230,230,230,1);
+			border:1px solid #0094FF;
+			border-radius: 10px;	
+	 	}
+	 	#forgot_password_form form{
+	 			margin-top: 6px;
+	 	}
+	 	
+	 	#forgot_password_form .tbox{
+	 		width: 330px;
+			height: 25px;
+			margin-bottom: 6px; 
+			padding-left: 6px;
+	 	}
+	 	#forgot_password_form ._button{
+			width: 100px;
+			height: 30px;
+		}
+		#forgot_password_form ._submit{
+			margin-left: 7px;
+		}
+		#forgot_password_form ._close{
+			margin-left: 70px;
+		}
+	 
+	 
+	 </style>
+
+<script type="text/javascript">
+
+	$(document).ready( function() {
+		//remove old cookies
+		$.removeCookie( "u_session");
+		
+		/* attach a submit handler to the form */
+		$("#signin_button").click(
+						function(e) {
+							//$('#login_form').submit();
+
+							/* stop form from submitting normally */
+							e.preventDefault();
+							
+							var regexS = "[\\?&]"+ "redirectURL"+ "=([^&#]*)";
+							var regex = new RegExp(regexS);
+							var rawres = window.location.search;
+							var results = regex.exec(rawres);
+							var rdurl = null;
+							
+							if (results != null) {
+								rdurl = decodeURIComponent(results[1].replace(/\+/g, " "));
+								$('[name=redirectURL]').val(rdurl);
+							}
+
+							/* get some values from elements on the page: */
+							var $form = $("#login_form"), url = "login", indata = $form.serialize();
+
+							//post login info
+							$.post( url, indata, 
+									function(data) {
+												//console.log(data);
+										try{
+												var object = jQuery.parseJSON(data);
+												
+												if (object.rc != undefined && object.rc == 0) {
+
+													var exdate = new Date();
+													exdate.setDate(exdate.getDate() + 1);
+													
+													//cookie options
+													var cOptions = {
+														// domain: '*.mydomain.com',
+														path : '/',
+														expires : 1,
+														secure : false
+													};
+													var s_obj = object.usession;
+													console.log(JSON.stringify(s_obj));
+													
+													$.cookie.json = true;
+													$.cookie( "u_session", s_obj, cOptions );
+													/* $.cookie(
+																	"sessionId",
+																	object.usession.sid,
+																	cOptions); */
+													window.location = object.redirectURL;
+												} else {
+													// alert('message:' + object.rc);
+													$("#messageid").empty().append(object.message);
+												}
+										}catch (e) {
+											console.log(e);
+											console.log(data);
+										}
+								}).fail(function(jqXHR, textStatus, errorThrown){
+									alert(textStatus +', '+ errorThrown +' '+jqXHR.status);
+								});
+								
+						});
+		
+						//Show Hide Forgot password form
+						
+						$('#link_forgot_pass a, #forgot_password_form ._close').on('click', function(){
+									//$('#forgot_password_form').hide();
+									$('#forgot_password_form').animate({
+									    width: 'toggle',
+									    height: 'toggle'
+									  }, {
+									    duration: 500
+									  });
+									$('#forgot_password_form .message').html('');
+									$('#forgot_password_form .tbox').val('');
+						});
+						
+						//Submit form
+						$('#forgot_password_form ._submit').on('click', function(e){
+								e.preventDefault();
+								
+								/* get some values from elements on the page: */
+								var $form = $("#forgot_password_form form"), url = "forgotPassword", indata = $form.serialize();
+
+								//post login info
+								$.post( url, indata, 
+										function(data) {
+											try{
+													var object = jQuery.parseJSON(data);
+													
+													if( object.message >= 0 ){
+														var msg = object.messageTxt;
+														$('#forgot_password_form .message').html('<span style="color: green;">'+msg+'</span>');		
+														
+													}else{
+														var msg = object.messageTxt;
+														$('#forgot_password_form .message').html('<span style="color: red;">'+msg+'</span>');		
+													}
+													
+											}catch (e) {
+												console.log(e);
+												console.log(data)
+											}
+										
+										});
+						});
+					});
+</script>
+</head>
+<body>
+
+	<table class="wrapper">
+		<thead>
+			<tr>
+				<th class="rBanner">
+					<h1>Slash Digital 1.0</h1>
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="panel_head"><h3>Welcome To Slash Digital</h3> <span>Unleashe The Digital Experience</span></td>
+			</tr>
+			<tr>
+				<td class="form_area">
+					<div class="form_Panel">
+						<form id="login_form" action="#" method="post">
+							<table>
+								<thead><tr><th colspan="2" class="hlbl"><b>Sign In</b></th></tr>
+										<tr><th>
+										<input type="hidden" id="source" name="source" value="auth"/>
+										<input type="hidden" id="redirectURL" name="redirectURL" value=""/>
+										<br></th></tr>
+								</thead>
+								<tbody>
+									<tr><td colspan="2" style="color: red;"><span id="messageid"></span></td></tr>
+									
+ 									<tr><td class="ilbl">E-mail</td><td><input type="text" name="j_username" id="j_username" placeholder=" Enter Your E-mail Id" value="" class="tbox"></td></tr>
+									<tr><td class="ilbl">Password</td><td><input type="password" name="j_password" id="j_password" placeholder=" Enter Password" value="" class="tbox"></td></tr>
+
+									<tr><td></td><td colspan="2"><input type="checkbox" name="remember" >Keep me signed in</td></tr>
+									<!-- <tr><td><br> </td></tr> -->
+									<tr>
+										<td></td><td colspan="1" class="submitbtn"><!-- <a href="#" id="signin_button" class="button" style="padding: 6px 10px 5px 10px; margin-left:0; "><span class="label green">Sign In</span></a> -->
+										<input type="submit" name="submit" id="signin_button" value="Sign In" class="_submit">
+										</td>
+									</tr>
+									<tr>
+										<td></td><td class="cantacess" id="link_forgot_pass"><a href="#">Can't access your account?</a></td>
+									</tr>
+								</tbody>
+							</table>
+						</form>
+					</div>
+				</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td >
+					<div class="rFooter">&copy; Copyright 2013 TechnoMedia Software Solutions Pvt Ltd</div>
+				</td>
+			</tr>
+		</tfoot>
+	</table>
+	<div class="hidden_elem" id="forgot_password_form">
+			<form  action="#" method="post" >
+				<table>
+					<thead>
+						<tr>
+							<th colspan="2">Please Enter Following Details for Recovering Your Password</th>
+						</tr>
+					</thead>
+					<tbody>
+							<tr>
+								<td colspan="2"><br></td>
+							</tr>
+							<tr><td class="message" colspan="2"></td></tr>
+							<tr>
+								<td><label>Email Id</label></td><td><input type="text" name="email_id" value="" placeholder="Please Enter Your Email Id" class="tbox"></td>
+							</tr>
+							<tr>
+								<td><label>Mobile No</label></td><td><input type="text" name="mobile_no" value="" placeholder="Please Enter Your Mobile No" class="tbox"></td>
+							</tr>
+							<tr><td><br></td></tr>
+							<tr><td></td>
+								<td><input type="submit" value="Submit" class="_submit _button">
+									<input type="button" value="Close" class="_close _button">
+								</td>
+							</tr>
+					</tbody>
+					<tfoot></tfoot>
+				</table>
+			</form>
+	</div>
+</body>
+</html>

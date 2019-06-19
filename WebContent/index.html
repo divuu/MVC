@@ -1,0 +1,2177 @@
+	<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+	<!-- Enable Cache Control -->
+	<!-- <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+	<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-STORE">
+	<META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE"> -->
+
+	<title>Slash Digital::Home</title>
+	<!-- Icon -->
+	<link href="images/ra_icon.ico" rel="icon" type="image/x-icon" sizes="64x64" />
+	
+	<link rel="stylesheet" href="css/jquery-ui-1.8.23.custom.css" type="text/css" />
+	<!-- <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css" /> -->
+	<link rel="stylesheet" href="css/timepicker.css" type="text/css" />
+	<link rel="stylesheet" href="css/jquery.dataTables_themeroller.css" type="text/css" />
+	<link rel="stylesheet" href="css/css3-buttons.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="css/myContextMenu.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="css/style_body.css" type="text/css" />
+	<link rel="stylesheet" href="css/bootstrap-iso.css" />
+	<!-- bootstrap isolated css -->
+	<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/bootstrapForm.css" type="text/css" />
+
+	<!-- Plugins -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/plugins/jquery-1.8.3.js"></script>
+	<script type="text/javascript" src="js/plugins/jquery-ui-1.8.23.custom.min.js"></script>
+	<script type="text/javascript" src="js/plugins/timepicker.js"></script>
+	<script type="text/javascript" src="js/plugins/jquery.cookie.js"></script>
+	<script type="text/javascript" src="js/plugins/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" src="js/plugins/jquery.dataTableExt.oSort.js"></script>
+	<script type="text/javascript" src="js/plugins/jquery.tiptip.js"></script>
+	<script type="text/javascript" src="js/plugins/jquery.ui.selectmenu.js"></script>
+	<script type="text/javascript" src="js/plugins/download.js"></script>
+	<!-- Commons -->
+	<script type="text/javascript" src="js/commons/DaysOfWeekPicker.js"></script>
+	<script type="text/javascript" src="js/commons/Ajax_method_script.js"></script>
+	<script type="text/javascript" src="js/commons/Ajax_New_method.js"></script>
+	<script type="text/javascript" src="js/commons/SocketConn.js"></script>
+	<script type="text/javascript" src="js/commons/error.js"></script>
+	<script type="text/javascript" src="js/commons/datapicker.js"></script>
+	<script type="text/javascript" src="js/commons/myContextMenu.js"></script>
+	<!-- Utils -->
+	<script type="text/javascript" src="js/utils/validation.js"></script>
+	<script type="text/javascript" src="js/utils/Common_utils_script.js"></script>
+	<script type="text/javascript" src="js/utils/BitUtils.js"></script>
+	<!-- Settings -->
+	<script type="text/javascript" src="js/settings/APP_SETTING.js"></script>
+	
+	<!-- Application  -->
+	<!-- <script type="text/javascript" src="js/application.clean.js"></script> -->
+	<script type="text/javascript" src="js/Analytics_script.js"></script>
+	<script type="text/javascript" src="js/application_main.js"></script>
+	<script type="text/javascript" src="js/Organization_script.js"></script>
+	<script type="text/javascript" src="js/OrganizationSysUserMap_script.js"></script>
+	<script type="text/javascript" src="js/Role_script.js"></script>
+	<script type="text/javascript" src="js/SysUser_script.js"></script>
+	<script type="text/javascript" src="js/City_script.js"></script>
+	<script type="text/javascript" src="js/Country_script.js"></script>
+	<script type="text/javascript" src="js/Currency_script.js"></script>
+	<script type="text/javascript" src="js/Lookup_script.js"></script>
+	<script type="text/javascript" src="js/LookupGroup_script.js"></script>
+	<script type="text/javascript" src="js/SoftwareFeatureConst.js"></script>
+	<script type="text/javascript" src="js/Currency_script.js"></script>
+	<script type="text/javascript" src="js/Role_script.js"></script>
+	<script type="text/javascript" src="js/SystemIssue_script.js"></script>
+	<script type="text/javascript" src="js/Subscriber_script.js"></script>
+
+
+</head>
+
+<body>
+	<!--body of the page here goes-->
+	<!-- Main Layout -->
+	<table class="wrapper">
+		<thead>
+			<tr>
+				<th colspan="2" style="height: 100px;">
+					<div class="rBanner">
+						<div class="organization_logo"></div>
+						<div class="application_name">
+							<h1>Slash Digital 1.0</h1>
+							<p id="organization_details_header" style="margin-top: 0;"></p>
+						</div>
+					</div>
+					<div id="account_options">
+						<div class="dropdown">
+							<a href="#" class="button"> <span class="icon icon4">&nbsp;</span>
+								<span class="label user_name">Guest User</span> <span class="toggle">&nbsp;</span>
+							</a>
+						</div>
+															
+						<div class="dropdown_menu hide_elem" style="min-width: 145px;  top: 28px; right: 6px;"> 
+							<ul>
+								<!-- <li><a href="#">Settings</a></li> -->
+								<li><a class="change_password" href="#">Change Password</a></li>
+								<li><a href="logout">Logout</a></li>
+							</ul>
+						</div>
+					</div>
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="rTabPanel">
+					<h3>Dash Board:</h3>
+				</td>
+				<td class="rTabButtonControlPanel">
+					<!-- do not change -->
+					<div id="tabs-header">
+						<div class="tab_scroller tabs-scroller-left" style="left: 0; height: 30px; display: none;">
+							<span></span>
+						</div>
+						<div class="tab_scroller tabs-scroller-right" style="right: 0; height: 30px; display: none;">
+							<span></span>
+						</div>
+						<div id="tab_bar">
+							<div style="position: absolute; width: 3000px;">
+								<ul class="tabs">
+									<!-- Tabs go here -->
+									<li class="current"><a class="tab" id="home_tab" rel="home_tab" href="#">&nbsp;Home&nbsp;</a></li>
+								</ul>
+							</div>
+							<ul id="TabContextMenu" class="ContextMenu">
+								<li class="close"><a href="#close" style="width: 92px;">Close
+										All Tabs</a></li>
+							</ul>
+						</div>
+					</div>
+					<!--end - do not change -->
+					<div id="tab_tool">
+						<!-- <button type="button" id="role_add_button">Add</button>TODO remove  -->
+						<img class="ajax_loader_img hide_elem" alt="..Loading" src="images/image_433441.gif" style="position: relative; float: right; top: 5px; right: 5px;">
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td class="rNavgator">
+					<div class="navPanel" id="dash_board">
+						<!-- Accordian -->
+						<div class="" id="dash_board_accordion" style="height: 100%;">
+							<!-- 						<h3>
+								<a href="#">Network/Supply Chain</a>
+							</h3>
+							<div>
+								<ul class="tab_link" id="">
+									<li><a href="#" rel="CompanyDetails" title="Company">Company</a></li>
+
+								</ul>
+							</div>
+ -->
+							<h3>
+								<a href="#">Transactions</a>
+							</h3>
+							<div id="Transactions1"></div>
+							<h3>
+								<a href="#">Masters</a>
+							</h3>
+							<div id="Masters1"></div>
+														<!-- <h3>
+								<a href="#">Master</a>
+							</h3>
+							<div>
+								<ul class="tab_link" id="">
+									<li><a href="#" rel="OrganizationDetails" title="Organization">Organization</a></li>
+									<li><a href="#" rel="CategoryDetails" title="Category">Category</a></li>
+									<li><a href="#" rel="SysUserDetails" title="Sys User">User</a></li>
+									<li><a href="#" rel="RoleDetails" title="Role">Role</a></li>
+
+								</ul>
+							</div>
+														<h3><a href="#">Issues</a></h3>
+														<div>
+															<ul class="tab_link" id="">
+											<li><a href="#" rel="OpenRequestsDetails" title="Issues">Issues</a></li>		
+							 -->
+						</div>
+
+					</div>
+				</td>
+				<!-- Tab Content Area -->
+				<td class="rContainer">
+					<div id="table_ajax_loader" class="hide_elem">
+						<img class="ajax_loader_img" alt="..Loading" src="images/ajax_loader_table3.gif">
+					</div>
+					<div class="contents">
+						<div id="tab_content">
+							<!-- Tab content goes here -->
+							<!-- Home Tab -->
+							<div class="tblContainer" id="home_tab_content">
+								<h1 align="center">Welcome to Slash Digital</h1>
+								<!-- TODO add a setting page to add this text -->
+								<table>
+									<thead>
+										<tr>
+											<th colspan="2"></th>
+										</tr>
+										<tr>
+											<td><br></td>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td><select name="organization_id" class="home_sbox">
+													<option value="0">Select Organization</option>
+												</select></td>
+											<td><a href="#" class="_change_organization button"><span class="label red">&nbsp;&nbsp;<b>Go</b>&nbsp;&nbsp;
+													</span></a></td>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr>
+											<td></td>
+											<td></td>
+										</tr>
+									</tfoot>
+								</table>
+							</div>
+							<!--End Home Tab -->
+
+							<!-- Other tabs -->
+						</div>
+					</div>
+				</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td colspan="2">
+					<div class="rFooter">
+						&copy; Copyright 2019 <a href="http://www.technomediasoft.com/" target="_blank">TechnoMedia Software Solutions
+							Pvt Ltd</a>
+					</div>
+				</td>
+			</tr>
+		</tfoot>
+	</table>
+	<!-- End of main layout -->
+	<!-----------------------Dialog window---------------------------- -->
+
+	<div id="selected_null_edit" class="dialog_window" title="Warning">
+		<!-- <p>Please select a row and then click EDIT!</p> -->
+		<p>Please select a row and to continue!</p>
+	</div>
+	<div id="selected_null_del" class="dialog_window" title="Warning">
+		<p>Please select one or more rows to continue!</p>
+	</div>
+	<div id="delete_row_confirm" class="dialog_window">
+		<p style="margin-left: 5px"></p>
+		<p>
+			<span class="ui-icon ui-icon-alert" style="float: left; margin: 0 7px 20px 0;"></span> <span class="message"></span>
+		</p>
+	</div>
+
+	<div id="selected_more" class="dialog_window" title="Warning">
+		<p>Please select only one row to continue!</p>
+	</div>
+
+	<div id="messageid" class="dialog_window" title="Status"></div>
+	<div id="messageWarningId" class="dialog_window" title="Status">
+		<p>
+			<span class="ui-icon ui-icon-alert" style="float: left; margin: 0 7px 20px 0;"></span> <span class="message"></span>
+		</p>
+	</div>
+	<div id="messageSuccessId" class="dialog_window" title="Status"></div>
+	<div id="messageInvalidId" class="dialog_window" title="Status"></div>
+	<div id="messageFailedId" class="dialog_window" title="Status"></div>
+	<div id="genCertificateOfOrigin" class="dialog_window">
+		<div class="bootstrap-iso" id="commercial_info_summary">
+			<h1 class="display-4 text-center label-main">Generate Certificate Of Origin</h1>
+			<ul class="list-group mb-3">
+				<li class="list-group-item d-flex justify-content-between ">
+					<div>
+						<h6 class="my-0 label-number">Commercial Invoice Number:</h6>
+						<!-- <small class="text-muted">Brief description</small> -->
+					</div>
+					<h6 class="number"></h6>
+				</li>
+				<li class="list-group-item d-flex justify-content-between ">
+					<div>
+						<h6 class="my-0 label-date">Commercial Invoice Date:</h6>
+						<!-- <small class="text-muted">Brief description</small> -->
+					</div>
+					<h6 class="date"></h6>
+				</li>
+				<li class="list-group-item d-flex justify-content-between ">
+					<h6 class="my-0 label-name">Customer:</h6>
+					<h6 class="name"></h6>
+				</li>
+				<li class="list-group-item d-flex justify-content-between">
+					<h6 class="my-0 label-quantity">Quantity:</h6>
+					<div>
+						<h6 class="my-0 quantity"></h6>
+						<small>In KGS</small>
+					</div>
+				</li>
+				<li class="list-group-item d-flex justify-content-between text-success bg-light">
+					<div>
+						<h6 class="my-0 label-amount">Total Amount:</h6>
+						<small class="text-muted currency-word"></small>
+					</div>
+					<h6 class="amount"></h6>
+				</li>
+			</ul>
+		</div>
+		<div class="spin-wrapper">
+			<div class="spinner"></div>
+		</div>
+		<div class="bootstrap-iso">
+			<div class="container">
+				<img src="images/checked.png" class="img-fluid mx-auto d-block" alt="" />
+				<h2 class="display-4 text-center label-main">
+					Certificate Of Origin Generated!
+				</h2>
+				<div class="d-flex justify-content-center">
+					<a href="#" target="_blank" class="btn btn-sm btn-success" >View Certificate</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="generateAllDoc" class="dialog_window">
+		<div class="bootstrap-iso" id="commercial_info_summary">
+			<h1 class="display-4 text-center label-main">Generate Negotiation Documents</h1>
+			<ul class="list-group mb-3">
+				<li class="list-group-item d-flex justify-content-between ">
+					<div>
+						<h6 class="my-0 label-number">Commercial Invoice Number:</h6>
+						<!-- <small class="text-muted">Brief description</small> -->
+					</div>
+					<h6 class="number"></h6>
+				</li>
+				<li class="list-group-item d-flex justify-content-between ">
+					<div>
+						<h6 class="my-0 label-date">Commercial Invoice Date:</h6>
+						<!-- <small class="text-muted">Brief description</small> -->
+					</div>
+					<h6 class="date"></h6>
+				</li>
+				<li class="list-group-item d-flex justify-content-between ">
+					<h6 class="my-0 label-name">Customer:</h6>
+					<h6 class="name"></h6>
+				</li>
+				<li class="list-group-item d-flex justify-content-between">
+					<h6 class="my-0 label-quantity">Quantity:</h6>
+					<div>
+						<h6 class="my-0 quantity"></h6>
+						<small>In KGS</small>
+					</div>
+				</li>
+				<li class="list-group-item d-flex justify-content-between text-success bg-light">
+					<div>
+						<h6 class="my-0 label-amount">Total Amount:</h6>
+						<small class="text-muted currency-word"></small>
+					</div>
+					<h6 class="amount"></h6>
+				</li>
+			</ul>
+			<div class="input-container">
+				<div class="row">
+					<div class="col">
+						<div class="form-group">
+							<p class="lead">Negotiation Document Date</p> 
+							<input type="date" name="document_date" class="font-weight-bold form-control-sm form-control tbox"
+							placeholder="DD-MM-YYYY" autocomplete="off" />
+						</div>
+						<div class="form-group">
+							<p class="lead">Bank Submission Date</p> 
+							<input type="date" name="bank_submission_date" class="font-weight-bold form-control-sm form-control tbox"
+							placeholder="DD-MM-YYYY" autocomplete="off" />
+						</div>
+						<div class="form-group">
+							<p class="lead">Shipment Date</p> 
+							<input type="date" name="shipment_date" class="font-weight-bold form-control-sm form-control tbox"
+							placeholder="DD-MM-YYYY" autocomplete="off" />
+						</div>
+						
+					</div>
+					<div class="col">
+						<div class="form-group">
+							<p class="lead">ETA & ETD</p> 
+							<input type="text" name="eta_etd_info" class="font-weight-bold form-control-sm form-control tbox"
+							placeholder="" />
+						</div>
+						<div class="form-group">
+							<p class="lead">Transporter</p> 
+							<input type="text" name="transporter" class="font-weight-bold form-control-sm form-control tbox"
+							placeholder="" />
+						</div>
+						<div class="form-group">
+							<p class="lead">Type of Transport</p>
+							<select name="type_of_transport_lookup_id" id="" class="font-weight-bold form-control-sm form-control sbox">
+								<option value="0">Select Type of Transport</option>
+							</select>
+						</div>
+						<div class="row">
+							<div class="col">
+								<div class="form-group">
+									<p class="lead label-type">Shipment Number</p> 
+									<input type="text" name="shipment_number" class="font-weight-bold form-control-sm form-control tbox"
+									placeholder="" />
+								</div>
+							</div>
+							<div id="container_number_col" class="d-none col">
+								<div class="form-group">
+									<p class="lead">Container Number</p> 
+									<input type="text" name="container_number" class="font-weight-bold form-control-sm form-control tbox"
+									placeholder="" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="spin-wrapper">
+			<div class="spinner"></div>
+		</div>
+		<div class="bootstrap-iso generated">
+			<div class="container">
+				<img src="images/checked.png" class="img-fluid mx-auto d-block" alt="" />
+				<h2 class="display-4 text-center label-main">
+					Documents Generated!
+				</h2>
+				<div class="d-flex justify-content-center">
+					<a href="#" target="_blank" class="btn btn-sm btn-success" >View Documents</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="messageAddSuccessId" class="dialog_window bootstrap-iso" title="Summary">
+
+		<img src="images/checked.png" class="img-fluid mx-auto d-block" alt="" />
+		<h1 class="display-4 text-center label-main"></h1>
+		<ul class="list-group mb-3">
+			<li class="list-group-item d-flex justify-content-between ">
+				<div>
+					<h6 class="my-0 label-number"></h6>
+					<!-- <small class="text-muted">Brief description</small> -->
+				</div>
+				<h6 class="number"></h6>
+			</li>
+			<li class="list-group-item d-flex justify-content-between ">
+				<div>
+					<h6 class="my-0 label-date"></h6>
+					<!-- <small class="text-muted">Brief description</small> -->
+				</div>
+				<h6 class="date"></h6>
+			</li>
+			<li class="list-group-item d-flex justify-content-between ">
+				<h6 class="my-0 label-name"></h6>
+				<h6 class="name"></h6>
+			</li>
+			<li class="list-group-item d-flex justify-content-between">
+				<h6 class="my-0 label-quantity">Quantity:</h6>
+				<div>
+					<h6 class="my-0 quantity"></h6>
+					<small>In KGS</small>
+				</div>
+			</li>
+			<li class="list-group-item d-flex justify-content-between text-success bg-light">
+				<div>
+					<h6 class="my-0 label-amount">Total Amount:</h6>
+					<small class="text-muted currency-word"></small>
+				</div>
+				<h6 class="amount"></h6>
+			</li>
+		</ul>
+
+	</div>
+	<div id="delete_confirm" class="dialog_window">
+		<p style="margin-left: 5px"></p>
+		<p>
+			<span class="ui-icon ui-icon-alert" style="float: left; margin: 0 7px 20px 0;"></span> <span class="message"></span>
+		</p>
+	</div>
+	<div id="messageWaitforProcess" class="hide_elem">
+		<p>
+			<img class="ajax_loader_img" alt="..Loading" src="images/ajaxloader.gif"><em>&nbsp;&nbsp;</em><span class='message'></span>
+		</p>
+	</div>
+
+	<!-- FINAL All forms go in here -->
+	<br>
+	<br>
+
+	<div id="edit_city_form" class="dialog_window">
+		<form method="post" action="#" class="addForm">
+		<div class="bootstrap-iso">
+				<div class="container-fluid background-dialog">
+					<div>
+						<h1 class="display-4 text-center">City</h1>
+					</div>
+				<div class="row">
+					<div class="col">
+
+					<div class="row">
+						<div class="col">
+							<div class="form-group">
+								<label>City Id</label>
+								<input type="text" name="city_id" value="0" placeholder="max(10) digits" maxlength="10"
+								class="font-weight-bold form-control form-control-sm" readonly="true"/>
+							</div>
+						</div>
+						<div class="col">
+							<div class="form-group">
+								<label>City</label>
+								<input type="text" name="city" value="" placeholder="max(64) chars" maxlength="64"
+								class="font-weight-bold form-control form-control-sm" />
+							</div>
+						</div>
+					</div>	
+
+					<div class="row">
+						<div class="col">
+							<div class="form-group">
+								<label>City Area Code</label> <input type="text" name="city_area_code" value="" placeholder="max(16) chars" maxlength="16"
+								class="font-weight-bold form-control form-control-sm" />
+							</div>
+						</div>
+						<div class="col">
+							<div class="form-group">
+								<label>Time Zone</label>
+								<input type="text" name="time_zone" value="" placeholder="max(64) chars" maxlength="64"
+								class="font-weight-bold form-control form-control-sm"/>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col">
+							<div class="form-group">
+								<label>State</label>
+								<select name="state_lookup_id"class="font-weight-bold form-control form-control-sm" >
+									<option value="0">Select State </option>
+								</select>
+							</div>
+						</div>
+						<div class="col">
+							<div class="form-group">
+								<label>Country</label>
+								<select name="country_id" class="font-weight-bold form-control form-control-sm" >
+									<option value="0">Select Country</option>
+								</select>
+							</div>
+						</div>
+					</div>
+
+					</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+	<br> <br>
+
+
+	<div id="edit_country_form" class="dialog_window">
+		<form method="post" action="#" class="addForm">
+	<div class="bootstrap-iso">
+			<div class="container-fluid background-dialog">
+				<div>
+					<h1 class="display-4 text-center">Country</h1>
+				</div>
+			<div class="row">
+				<div class="col">
+				<div class="row">
+					<div class="col">
+						<div class="form-group">
+							<label>Country Id</label>
+							<input type="text" name="country_id" value="0" placeholder="max(5) digits" maxlength="5"
+							class="font-weight-bold form-control form-control-sm" readonly="true"/>
+						</div>
+					</div>
+					<div class="col">
+						<div class="form-group">
+							<label>Country</label>
+							<input type="text" name="country" value="" placeholder="max(64) chars" maxlength="64"
+							class="font-weight-bold form-control form-control-sm" />
+						</div>
+					</div>
+				</div>	
+				<div class="row">
+					<div class="col">
+						<div class="form-group">
+							<label>Country Code</label> <input type="text" name="country_code" value="" placeholder="max(16) chars" maxlength="16"
+							class="font-weight-bold form-control form-control-sm" />
+						</div>
+					</div>
+					<div class="col">
+						<div class="form-group">
+							<label>No Of Digits</label>
+							<input type="text" name="no_of_digits" value="0" placeholder="max(10) digits" maxlength="10"
+							class="font-weight-bold form-control form-control-sm"/>
+						</div>
+					</div>
+				</div>
+				</div>
+				</div>
+			</div>
+		</div>
+		</form>
+	</div>
+	<br> <br>
+
+
+	<div id="edit_currency_form" class="dialog_window">
+		<form method="post" action="#" class="addForm">
+			<div class="bootstrap-iso">
+				<div class="container-fluid background-dialog">
+					<div>
+						<h1 class="display-4 text-center">Currency</h1>
+					</div>
+				<div class="row">
+					<div class="col">
+					<div class="row">
+						<div class="col">
+							<div class="form-group">
+								<label>Currency Id</label>
+								<input type="text" name="currency_id" value="0" placeholder="max(10) digits" maxlength="10"
+								class="font-weight-bold form-control form-control-sm" readonly="true"/>
+							</div>
+						</div>
+						<div class="col">
+							<div class="form-group">
+								<label>Currency Symbol</label>
+								<input type="text" name="currency_symbol" value="" placeholder="max(8) chars" maxlength="8"
+								class="font-weight-bold form-control form-control-sm" />
+							</div>
+						</div>	
+					</div>	
+
+					<div class="row">
+						<div class="col">
+							<div class="form-group">
+								<label>Currency Word</label>
+								<input type="text" name="currency_word" value="" placeholder="max(16) chars" maxlength="16"
+								class="font-weight-bold form-control form-control-sm" />
+							</div>
+						</div>
+						<div class="col">
+							<div class="form-group">
+								<label>Currency Decimal</label>
+								<input type="text" name="currency_decimal" value="" placeholder="max(16) digits" maxlength="16"
+								class="font-weight-bold form-control form-control-sm"/>
+							</div>
+						</div>
+						<div class="col">
+							<div class="form-group">
+								<label>Conversion Rate With Usd</label>
+								<input type="text" name="conversion_rate_with_usd" value="" placeholder="max(12) digits" maxlength="12"
+								class="font-weight-bold form-control form-control-sm"/>
+							</div>
+						</div>
+					</div>
+					</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+	<br> <br>
+
+
+	<div id="edit_lookup_form" class="dialog_window">
+		<form method="post" action="#" class="addForm">
+		<h2>Lookup</h2>
+		  <table>
+
+
+			<tr>
+				<td> <label>Lookup Id</label></td>
+				<td><input type="text" name="lookup_id" value="0" placeholder="max(10) digits" maxlength="10"  class="tbox" /> </td>
+			</tr>
+
+			<tr>
+				<td><label>Lookup Group</label></td>
+				<td>
+					<select name="lookup_group_id" class="sbox" >
+						<option value="0">Select Lookup Group</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td> <label>Table Name</label></td>
+				<td><input type="text" name="table_name" value="" placeholder="max(128) chars" maxlength="128"  class="tbox" /> </td>
+			</tr>
+			<tr>
+				<td> <label>Column Name</label></td>
+				<td><input type="text" name="column_name" value="" placeholder="max(128) chars" maxlength="128"  class="tbox" /> </td>
+			</tr>
+			<tr>
+				<td> <label>Lookup Name</label></td>
+				<td><input type="text" name="lookup_name" value="" placeholder="max(256) chars" maxlength="256"  class="tbox" /> </td>
+			</tr>
+			<tr>
+				<td> <label>Lookup Value</label></td>
+				<td><input type="text" name="lookup_value" value="0" placeholder="max(10) digits" maxlength="10"  class="tbox" /> </td>
+			</tr>
+
+		  </table>
+		</form>
+	</div>
+	<br> <br>
+
+
+	<div id="edit_lookup_group_form" class="dialog_window">
+		<form method="post" action="#" class="addForm">
+		<h2>Lookup Group</h2>
+		  <table>
+
+
+			<tr>
+				<td> <label>Lookup Group Id</label></td>
+				<td><input type="text" name="lookup_group_id" value="0" placeholder="max(10) digits" maxlength="10"  class="tbox" /> </td>
+			</tr>
+			<tr>
+				<td> <label>Lookup Group Name</label></td>
+				<td><input type="text" name="lookup_group_name" value="" placeholder="max(256) chars" maxlength="256"  class="tbox" /> </td>
+			</tr>
+
+		  </table>
+		</form>
+	</div>
+	<br> <br>
+
+
+	<div id="edit_organization_form" class="dialog_window">
+		<form method="post" action="#" class="addForm">
+				<div class="bootstrap-iso">
+					<div class="container-fluid background-dialog">
+							<div>
+									<h1 class="display-4 text-center">Organization</h1>
+							</div>
+						<div class="row">
+							<div class="col">
+								<div class="row">
+									<div class="col">
+										<div class="form-group">
+											<label>Organization Id</label>
+											<input type="text" name="organization_id" value="0" placeholder="max(10) digits" maxlength="10"
+											class="font-weight-bold form-control form-control-sm" readonly="true"/>
+										</div>
+									</div>
+									<div class="col">
+										<div class="form-group">
+											<label>Organization Name</label>
+											<input type="text" name="organization_name" value="" placeholder="max(64) chars" maxlength="64"
+											class="font-weight-bold form-control form-control-sm" />
+										</div>
+									</div>
+									<div class="col">
+										<div class="form-group">
+											<label>Short Name</label>
+											<input type="text" name="short_name" value="" placeholder="max(8) chars" maxlength="8"
+											class=" font-weight-bold form-control form-control-sm" />
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col">
+										<div class="form-group">
+											<label>Registered Address</label>
+											<textarea  name="registered_address" placeholder="" rows="2" class="font-weight-bold form-control form-control-sm"></textarea>
+										</div>
+									</div>
+									<div class="col">
+										<div class="form-group">
+											<label>Business Address</label>
+											<textarea  name="business_address" placeholder="" rows="2" class="font-weight-bold form-control form-control-sm"></textarea>
+										</div>
+									</div>
+									<div class="d-none col">
+										<div class="form-group">
+											<label>Logo Path</label>
+											<textarea  name="logo_path" placeholder="" rows="2" class="font-weight-bold form-control form-control-sm"></textarea>
+										</div>
+									</div>
+								</div>
+				
+								<div class="row">
+									<div class="col">
+										<div class="form-group">
+											<label>Website</label> 
+											<input type="text" name="website" value="" placeholder="max(128) chars" maxlength="128"
+											class="font-weight-bold form-control form-control-sm"></input>
+										</div>
+									</div>
+									<div class="col">
+										<div class="form-group">
+											<label>City</label> <select name="city_id"
+												class="font-weight-bold form-control form-control-sm">
+												<option selected value="0">Select City</option>
+											</select>
+										</div>
+									</div>
+									<div class="col">
+										<div class="form-group">
+											<label>State</label> 
+											<select name="state_lookup_id"class="font-weight-bold form-control form-control-sm">
+												<option selected value="0">Select City</option>
+											</select>
+										</div>
+									</div>
+									<div class="col">
+										<div class="form-group">
+											<label>Country</label> <select name="country_id"
+												class="font-weight-bold form-control form-control-sm">
+												<option selected value="0">Select Country</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<!-- <div class="row">
+									<div class="col">
+										<div class="form-group">
+											<label>Address</label>
+											<textarea  name="address" placeholder="" rows="2" class="form-control form-control-sm"></textarea>
+										</div>
+									</div>
+								</div>
+								
+								<div class="row">
+									<div class="col">
+										<div class="form-group">
+											<label>Description</label>
+											<textarea  name="description" placeholder="" rows="2" class="form-control form-control-sm"></textarea>
+										</div>
+									</div>
+								</div> -->
+
+								<div class="row">
+									<div class="col">
+										<div class="form-group">
+											<label>Email</label>
+											<div class="input-group-append">
+												<input type="text" name="email" value="" placeholder="max(128) chars" maxlength="128" class="font-weight-bold form-control form-control-sm" /> 	
+											</div>
+										</div>
+									</div>
+									<div class="col">
+										<div class="form-group">
+											<label>Mobile Number</label>
+											<div class="input-group-append">
+												<input type="text" name="mobile_number" value="" placeholder="max(24) chars" maxlength="24" class="font-weight-bold form-control form-control-sm" /> 
+												
+											</div>
+										</div>
+									</div>
+									<div class="col">
+										<div class="form-group">
+											<label>Landline Number</label>
+											<div class="input-group-append">
+												<input type="text" name="landline_number" value="" placeholder="max(24) chars" maxlength="24" class="font-weight-bold form-control form-control-sm" /> 
+												
+											</div>
+										</div>
+									</div>
+									<div class="col">
+										<div class="form-group">
+											<label>Fax Number</label>
+											<div class="input-group-append">
+												<input type="text" name="fax_number" value="" placeholder="max(24) chars" maxlength="24" class="font-weight-bold form-control form-control-sm" /> 
+												
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+		
+						<div class="row">
+							<div class="col">
+								<div class="form-group">
+									<label>Contact Person Name</label>
+									<div class="input-group-append">
+											<input type="text" name="contact_person_name" value="" placeholder="max(128) chars" maxlength="128" class="font-weight-bold form-control form-control-sm" /> 	
+									</div>
+								</div>
+							</div>
+							<div class="col">
+								<div class="form-group">
+									<label>Person Mobile Number</label>
+									<div class="input-group-append">
+										<input type="text" name="contact_person_mobile_number" value="" placeholder="max(24) chars" maxlength="24" class="font-weight-bold form-control form-control-sm" /> 
+									</div>
+								</div>
+							</div>
+							<div class="col">
+								<div class="form-group">
+									<label>Contact Person Whatsapp No</label>
+									<div class="input-group-append">
+										<input type="text" name="contact_person_whatsapp_no" value="" placeholder="max(24) chars" maxlength="24" class="font-weight-bold form-control form-control-sm" /> 
+									</div>
+								</div>
+							</div>
+							<div class="col">
+								<div class="form-group">
+									<label>Contact Person Email</label>
+									<div class="input-group-append">
+										<input type="text" name="contact_person_email" value="" placeholder="max(128) chars" maxlength="128" class="font-weight-bold form-control form-control-sm" /> 
+									</div>
+								</div>
+							</div>
+						</div>
+		
+						<div class="row">
+							<div class="col">
+								<div class="form-group">
+									<label>Preferences</label>
+									<input type="text" name="preferences" value="0" placeholder="max(10) digits" maxlength="10"
+									class="font-weight-bold form-control form-control-sm" readonly="true" ></input>
+								</div>
+							</div>
+							<div class="d-none col">
+								<div class="form-group">
+									<label>Documents Path</label>
+									<textarea  name="documents_path" placeholder="" rows="2" class="font-weight-bold form-control form-control-sm"></textarea>
+								</div>
+							</div>
+							<div class="col">
+								<div class="form-group">
+								<label>Remarks</label>
+								<textarea  name="remarks" placeholder="" rows="2" class="font-weight-bold form-control form-control-sm"></textarea>
+								</div>
+							</div>
+						</div>
+						<!-- <tr>
+								<td><label>Bank Account</label></td>
+								<td>
+									<select name="bank_account_id" class="sbox" >
+										<option value="0">Select Bank Account</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td> <label>Type Of Business</label></td>
+								<td><input type="text" name="type_of_business" value="0" placeholder="max(10) digits" maxlength="10"  class="tbox" /> </td>
+							</tr> -->
+		
+						</div>
+					</div>
+		</form>
+	</div>
+	<br> <br>
+
+<div id="edit_analytics_form" class="dialog_window">
+	<form method="post" action="#" class="addForm">
+		<div class="bootstrap-iso">
+				<div class="container-fluid background-dialog">
+					<div>
+						<h1 class="display-4 text-center">Analytics</h1>
+				</div>
+	  	<div class="row">
+					<div class="col">
+
+					<div class="row">
+						<div class="col">
+							<div class="form-group">
+								<label>Analytics Id</label>
+								<input type="text" name="analytics_id" value="0" placeholder="max(10) digits" maxlength="10" 
+								class="font-weight-bold form-control form-control-sm" readonly="true"/>
+							</div>
+						</div>
+						<div class="col">
+							<div class="form-group">
+								<label>Subscriber</label>
+								<select name="subscriber_id" class="font-weight-bold form-control form-control-sm">
+										<option value="0">Select Subscriber</option>
+								</select>
+							</div>
+						</div>				
+						<div class="d-none col">
+							<div class="form-group">
+								<label>Organization</label>
+								<select name="organization_id" class="font-weight-bold form-control form-control-sm">
+									<option selected value="0">Select Organization</option>
+								</select>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+							<div class="col">
+								<div class="form-group">
+									<label>Session Start Time</label>
+									<div class="row">
+									<div class="col-md-6" style="padding-right: 0px;">
+
+									<input type="text" name="session_start_time_date" value="" placeholder="DD/MM/YYYY" Title="Date as DD/MM/YYYY" maxlength="10"
+									class="font-weight-bold form-control form-control-sm"/>
+									</div>
+
+									<div class="col-md-6" style="padding-left: 0px;">
+
+									<input type="text" name="session_start_time_time" value=""
+									placeholder="HH:MM AM/PM" Title="Time as HH:MM AM/PM" maxlength="8"
+									class="font-weight-bold form-control form-control-sm"/>
+									</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="col">
+								<div class="form-group">
+									<label>Session End Time</label>
+									<div class="row">
+											<div class="col-md-6" style="padding-right: 0px;">
+												<input type="text" name="session_end_time_date" value=""
+												placeholder="DD/MM/YYYY" Title="Date as DD/MM/YYYY" maxlength="10"
+												class="font-weight-bold form-control form-control-sm"/>
+											</div>
+	
+											<div class="col-md-5" style="padding-left: 0px;">
+												<input type="text" name="session_end_time_time" value=""
+												placeholder="HH:MM AM/PM" Title="Time as HH:MM AM/PM" maxlength="8"
+												class="font-weight-bold form-control form-control-sm"/>
+											</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="col">
+								<div class="form-group">
+									<label>Pages Per Session</label>
+									<input type="text" name="pages_per_session" value="0" placeholder="max(10) digits" maxlength="10" 
+									class="font-weight-bold form-control form-control-sm" />
+								</div>
+							</div>
+							
+							<div class="col">
+								<div class="form-group">
+									<label>Total Session</label>
+									<input type="text" name="total_session" value="0" placeholder="max(10) digits" maxlength="10" 
+									class="font-weight-bold form-control form-control-sm" />
+								</div>
+							</div>
+					</div>
+
+					<div class="row">
+							<div class="col">
+								<div class="form-group">
+									<label>Total Visit</label>
+									<input type="text" name="total_visit" value="0" placeholder="max(10) digits" maxlength="10" 
+									class="font-weight-bold form-control form-control-sm" />
+								</div>
+							</div>
+
+							<div class="col">
+								<div class="form-group">
+									<label>New User</label>
+									<input type="text" name="new_user" value="0" placeholder="max(3) digits" maxlength="3" 
+									class="font-weight-bold form-control form-control-sm" />
+								</div>
+							</div>
+
+							<div class="col">
+								<div class="form-group">
+									<label>Channels Of Traffic</label>
+									<input type="text" name="channels_of_traffic" value="" placeholder="max(128) chars" maxlength="128" 
+									class="font-weight-bold form-control form-control-sm" />
+								</div>
+							</div>
+							
+							<div class="col">
+								<div class="form-group">
+									<label>Time Spent</label>
+									<input type="text" name="time_spent" value="" placeholder="max(12) digits" maxlength="12" 
+									class="font-weight-bold form-control form-control-sm" />
+								</div>
+							</div>
+
+					</div>
+					
+					<div class="row">
+							<div class="col">
+								<div class="form-group">
+									<label>Bounce Rate</label>
+									<input type="text" name="bounce_rate" value="" placeholder="max(12) digits" maxlength="12" 
+									class="font-weight-bold form-control form-control-sm" />
+								</div>
+							</div>
+
+							<div class="col">
+								<div class="form-group">
+									<label>Source Of Traffic</label>
+									<input type="text" name="source_of_traffic" value="" placeholder="max(128) chars" maxlength="128" 
+									class="font-weight-bold form-control form-control-sm" />
+								</div>
+							</div>
+
+							<div class="col">
+								<div class="form-group">
+									<label>Click</label>
+									<input type="text" name="click" value="0" placeholder="max(10) digits" maxlength="10" 
+									class="font-weight-bold form-control form-control-sm" />
+								</div>
+							</div>
+							
+							<div class="col">
+								<div class="form-group">
+									<label>Video Watched Duration</label>
+									<input type="text" name="video_watched_duration" value="" placeholder="max(12) digits" maxlength="12" 
+									class="font-weight-bold form-control form-control-sm" />
+								</div>
+							</div>
+
+					</div>
+
+					<div class="row">
+							<div class="col">
+								<div class="form-group">
+									<label>Browser</label>
+									<input type="text" name="browser" value="" placeholder="max(64) chars" maxlength="64" 
+									class="font-weight-bold form-control form-control-sm" />
+								</div>
+							</div>
+
+							<div class="col">
+								<div class="form-group">
+									<label>Operating System</label>
+									<input type="text" name="operating_system" value="" placeholder="max(64) chars" maxlength="64" 
+									class="font-weight-bold form-control form-control-sm" />
+								</div>
+							</div>
+
+							<div class="col">
+								<div class="form-group">
+									<label>Device</label>
+									<input type="text" name="device" value="" placeholder="max(128) chars" maxlength="128"
+									class="font-weight-bold form-control form-control-sm" />
+								</div>
+							</div>
+
+					</div>	
+
+					</div>
+			</div>
+
+    </div>
+	</div>
+		</form>
+	</div>
+	<br> <br>
+	
+
+	
+	<div id="edit_subscriber_form" class="dialog_window">
+		<form method="post" action="#" class="addForm">
+			<div class="bootstrap-iso">
+					<div class="container-fluid background-dialog">
+						<div>
+							<h1 class="display-4 text-center">Subscriber</h1>
+						</div>
+					<div class="row">
+							<div class="col">
+
+					<div class="row">
+							<div class="col">
+								<div class="form-group">
+									<label>Subscriber Id</label>
+									<input type="text" name="subscriber_id" value="0" placeholder="max(10) digits" maxlength="10"
+									class="font-weight-bold form-control form-control-sm" readonly="true"/>
+								</div>
+							</div>
+
+							<div class="col">
+								<div class="form-group">
+									<label>Name</label>
+									<input type="text" name="name" value="" placeholder="max(128) chars" maxlength="128"
+									class="font-weight-bold form-control form-control-sm"/>
+								</div>
+							</div>
+					</div>
+					
+					<div class="row">
+
+							<div class="col">
+								<div class="form-group">
+									<label>Mobile Number</label>
+									<input type="text" name="mobile_number" value="" placeholder="max(16) chars" maxlength="16"
+									class="font-weight-bold form-control form-control-sm"/>
+								</div>
+							</div>
+
+							<div class="col">
+								<div class="form-group">
+									<label>Email</label>
+									<input type="text" name="email" value="" placeholder="max(128) chars" maxlength="128"
+									class="font-weight-bold form-control form-control-sm"/>
+								</div>
+							</div>
+
+							<div class="col">
+								<div class="form-group">
+									<label>gender</label>
+									<input type="text" name="gender" value="" placeholder="max(1) chars" maxlength="1"
+									class="font-weight-bold form-control form-control-sm"/>
+								</div>
+							</div>
+
+							<div class="col">
+								<div class="form-group">
+									<label>Date of Birth</label>
+									<input type="date" name="date_of_birth" value="" placeholder="DD/MM/YYYY"
+									class="font-weight-bold form-control form-control-sm"/>
+								</div>
+							</div>	
+
+					</div>	
+
+					<div class="row">
+
+						<div class="col">
+							<div class="form-group">
+								<label>Date Of Registration</label>
+								<div class="row">
+										<div class="col-md">
+											<input type="date" name="date_of_registration_date" value=""
+											placeholder="DD/MM/YYYY" Title="Date as DD/MM/YYYY" maxlength="10"
+											class="font-weight-bold form-control form-control-sm"/>
+										</div>
+
+										<div class="d-none col-md-5">
+											<input type="text" name="date_of_registration_time" value=""
+											placeholder="HH:MM AM/PM" Title="Time as HH:MM AM/PM" maxlength="8"
+											class="font-weight-bold form-control form-control-sm"/>
+										</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col">
+							<div class="form-group">
+								<label>Plan</label>
+								<select name="plan_id" class="font-weight-bold form-control form-control-sm" >
+										<option value="0">Select Plan</option>
+								</select>
+							</div>
+						</div>
+						
+						<div class="col">
+							<div class="form-group">
+								<label>Plan Start Date</label>
+								<div class="row">
+										<div class="col-md">
+											<input type="date" name="plan_start_date_date" value=""
+											placeholder="DD/MM/YYYY" Title="Date as DD/MM/YYYY" maxlength="10"
+											class="font-weight-bold form-control form-control-sm"/>
+										</div>
+
+										<div class="d-none col-md">
+											<input type="text" name="date_of_registration_time" value=""
+											placeholder="HH:MM AM/PM" Title="Time as HH:MM AM/PM" maxlength="8"
+											class="font-weight-bold form-control form-control-sm"/>
+										</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col">
+							<div class="form-group">
+								<label>Plan End Date</label>
+								<div class="row">
+										<div class="col-md">
+											<input type="date" name="plan_end_date_date" value=""
+											placeholder="DD/MM/YYYY" Title="Date as DD/MM/YYYY" maxlength="10"
+											class="font-weight-bold form-control form-control-sm"/>
+										</div>
+
+										<div class="d-none col-md">
+											<input type="text" name="date_of_registration_time" value=""
+											placeholder="HH:MM AM/PM" Title="Time as HH:MM AM/PM" maxlength="8"
+											class="font-weight-bold form-control form-control-sm"/>
+										</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="row">
+						<div class="col">
+							<div class="form-group">
+								<label>Amount</label>
+								<input type="text" name="amount" value="" placeholder="max(12) digits" maxlength="12"
+								class="font-weight-bold form-control form-control-sm"/>
+							</div>
+						</div>
+						
+						<div class="col">
+							<div class="form-group">
+								<label>Discount Amount</label>
+								<input type="text" name="discount_amount" value="" placeholder="max(12) digits" maxlength="12"
+								class="font-weight-bold form-control form-control-sm"/>
+							</div>
+						</div>
+
+						<div class="col">
+							<div class="form-group">
+								<label>Amount Paid</label>
+								<input type="text" name="amount_paid" value="" placeholder="max(12) digits" maxlength="12"
+								class="font-weight-bold form-control form-control-sm"/>
+							</div>
+						</div>
+
+							
+						<div class="col">
+							<div class="form-group">
+								<label>Active</label>
+								<select name="active_lookup_id" class="font-weight-bold form-control form-control-sm" >
+										<option value="0">Select Active</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="d-none col">
+							<div class="form-group">
+								<label>Status</label>
+								<input type="text" name="status" value="0" placeholder="max(10) digits" maxlength="10"
+								class="font-weight-bold form-control form-control-sm" />
+							</div>
+						</div>
+
+					</div>	
+
+						</div>
+					</div>
+
+				</div>
+			</div>			
+
+		</form>
+	</div>
+	<br> <br>
+		
+
+	<div id="edit_organization_sys_user_map_form" class="dialog_window">
+		<form method="post" action="#" class="addForm">
+		<h2>Organization Sys User Map</h2>
+		  <table>
+
+
+			<tr>
+				<td> <label>Sys User Id</label></td>
+				<td><input type="text" name="sys_user_id" value="0" placeholder="max(5) digits" maxlength="5"  class="tbox" /> </td>
+			</tr>
+
+			<tr>
+				<td><label>Organization</label></td>
+				<td>
+					<select name="organization_id" class="sbox" >
+						<option value="0">Select Organization</option>
+					</select>
+				</td>
+			</tr>
+
+			<tr>
+				<td><label>Role</label></td>
+				<td>
+					<select name="role_id" class="sbox" >
+						<option value="0">Select Role</option>
+					</select>
+				</td>
+			</tr>
+
+		  </table>
+		</form>
+	</div>
+	<br> <br>	
+
+	<div id="edit_role_form" class="dialog_window">
+		<form method="post" action="#" class="addForm">
+			<div class="bootstrap-iso">
+					<div class="container-fluid background-dialog">
+					<div>
+						<h1 class="display-4 text-center">Role</h1>
+					</div>
+	  		<div class="row">
+					<div class="col">
+
+					<div class="row">
+						<div class="col">
+							<div class="form-group">
+								<label>Role Id</label>
+								<input type="text" name="role_id" value="0" placeholder="max(5) digits" maxlength="5" 
+								class="font-weight-bold form-control form-control-sm" readonly="true"/>
+							</div>
+						</div>
+						<div class="col">
+							<div class="form-group">
+								<label>Name</label>
+								<input type="text" name="name" value="" placeholder="max(64) chars" maxlength="64" 
+								class="font-weight-bold form-control form-control-sm"/>
+							</div>
+						</div>				
+						<div class="d-none col">
+							<div class="form-group">
+								<label>Organization</label>
+								<select name="organization_id" class="font-weight-bold form-control form-control-sm">
+									<option selected value="0">Select Organization</option>
+								</select>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="row">
+						<div class="col">
+							<div class="form-group">
+								<label>Role Web App Ui Features</label>
+								<textarea  name="role_web_app_ui_features" placeholder="" rows="2" 
+								class="font-weight-bold form-control form-control-sm enableTextEditor"></textarea>
+							</div>
+						</div>
+						<div class="col">
+							<div class="form-group">
+								<label>Role Mobile App Ui Features</label>
+								<textarea  name="role_mobile_app_ui_features" placeholder="" rows="2"
+								class="font-weight-bold form-control form-control-sm enableTextEditor"></textarea>
+								</select>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col">
+							<div class="form-group">
+								<label>Role Report Features</label>
+								<textarea  name="role_report_features" placeholder="" rows="2" 
+								class="font-weight-bold form-control form-control-sm enableTextEditor"></textarea>
+							</div>
+						</div>
+						<div class="col">
+							<div class="form-group">
+								<label>Role Menu</label>
+								<textarea  name="role_menu" placeholder="" rows="2"
+								class="font-weight-bold form-control form-control-sm enableTextEditor"></textarea>
+								</select>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col">
+							<div class="form-group">
+								<label>Role Script</label>
+								<textarea  name="role_script" placeholder="" rows="2" 
+								class="font-weight-bold form-control form-control-sm enableTextEditor"></textarea>
+							</div>
+						</div>
+						<div class="col">
+							<div class="form-group">
+								<label>Remarks</label>
+								<textarea  name="remarks" placeholder="" rows="2"
+								class="font-weight-bold form-control form-control-sm enableTextEditor"></textarea>
+								</select>
+							</div>
+						</div>
+					</div>					
+
+
+					</div>
+				</div>
+    </div>
+	</div>
+		</form>
+	</div>
+	<br> <br>
+
+
+	<div id="edit_system_issue_form" class="dialog_window">
+		<form method="post" action="#" class="addForm">
+		<h2>System Issue</h2>
+		  <table>
+
+
+			<tr>
+				<td> <label>System Issue Id</label></td>
+				<td><input type="text" name="system_issue_id" value="0" placeholder="max(10) digits" maxlength="10"  class="tbox" /> </td>
+			</tr>
+
+			<tr>
+				<td><label>System Issue Date</label></td>
+				<td> <!-- date time -->
+					<input type="text" name="system_issue_date_date" value=""
+							placeholder="DD/MM/YYYY" Title="Date as DD/MM/YYYY" maxlength="10" class="datepicker" style="width: 80px; margin-left: 0px;" autocomplete="off"/>
+					<input type="text" name="system_issue_date_time" value=""
+							placeholder="HH:MM AM/PM" Title="Time as HH:MM AM/PM" maxlength="8" class="timepicker" style="width: 56px;" autocomplete="off"/>
+				</td>
+			</tr>
+
+			<tr>
+				<td><label>Screen Name</label></td>
+				<td>
+					<textarea  name="screen_name" placeholder="" rows="2" class="tarea"></textarea>
+				</td>
+			</tr>
+
+			<tr>
+				<td><label>Description</label></td>
+				<td>
+					<textarea  name="description" placeholder="" rows="2" class="tarea"></textarea>
+				</td>
+			</tr>
+
+			<tr>
+				<td><label>Image File Path</label></td>
+				<td>
+					<textarea  name="image_file_path" placeholder="" rows="2" class="tarea"></textarea>
+				</td>
+			</tr>
+
+			<tr>
+				<td><label>Issue Type Lookup</label></td>
+				<td>
+					<select name="issue_type_lookup_id" class="sbox" >
+						<option value="0">Select Issue Type Lookup</option>
+					</select>
+				</td>
+			</tr>
+
+			<tr>
+				<td><label>Issue Priority Lookup</label></td>
+				<td>
+					<select name="issue_priority_lookup_id" class="sbox" >
+						<option value="0">Select Issue Priority Lookup</option>
+					</select>
+				</td>
+			</tr>
+
+			<tr>
+				<td><label>Resolution</label></td>
+				<td>
+					<textarea  name="resolution" placeholder="" rows="2" class="tarea"></textarea>
+				</td>
+			</tr>
+
+			<tr>
+				<td><label>Sys User</label></td>
+				<td>
+					<select name="sys_user_id" class="sbox" >
+						<option value="0">Select Sys User</option>
+					</select>
+				</td>
+			</tr>
+
+			<tr>
+				<td><label>Closed By Sys User</label></td>
+				<td>
+					<select name="closed_by_sys_user_id" class="sbox" >
+						<option value="0">Select Closed By Sys User</option>
+					</select>
+				</td>
+			</tr>
+
+			<tr>
+				<td><label>Closed Date</label></td>
+				<td> <!-- date time -->
+					<input type="text" name="closed_date_date" value=""
+							placeholder="DD/MM/YYYY" Title="Date as DD/MM/YYYY" maxlength="10" class="datepicker" style="width: 80px; margin-left: 0px;" autocomplete="off"/>
+					<input type="text" name="closed_date_time" value=""
+							placeholder="HH:MM AM/PM" Title="Time as HH:MM AM/PM" maxlength="8" class="timepicker" style="width: 56px;" autocomplete="off"/>
+				</td>
+			</tr>
+			<tr>
+				<td> <label>Status</label></td>
+				<td><input type="text" name="status" value="0" placeholder="max(10) digits" maxlength="10"  class="tbox" /> </td>
+			</tr>
+
+		  </table>
+		</form>
+	</div>
+	<br> <br>
+
+
+	<div id="edit_sys_user_form" class="dialog_window">
+		<form method="post" action="#" class="addForm">
+				<div class="bootstrap-iso">
+						<div class="container-fluid background-dialog">
+								<div>
+										<h1 class="display-4 text-center">Sys User</h1>
+								</div>
+							<div class="row">
+								<div class="col">
+								<div class="row">
+									<div class="col">
+										<div class="form-group">
+											<label>Sys User Id</label>
+											<input type="text" name="sys_user_id" value="0" placeholder="max(10) digits" maxlength="10" 
+											class="font-weight-bold form-control form-control-sm" readonly="true" />
+										</div>
+									</div>
+									<div class="col">
+										<div class="form-group">
+											<label>Role</label>
+											<select name="role_id" class="font-weight-bold form-control form-control-sm">
+												<option selected value="0">Select Role</option>
+											</select>
+										</div>
+									</div>
+								</div>	
+								<div class="row">
+										<div class="col">	
+											<div class="form-group">
+												<label>Name</label> <input type="text" name="name" value="" placeholder="max(128) chars" maxlength="128"
+													class="font-weight-bold form-control form-control-sm" />
+											</div>
+										</div>
+										<div class="col">
+											<div class="form-group">
+												<label>Mobile Number</label> 
+												<input type="text" name="mobile_number" value="" placeholder="max(16) chars" maxlength="16"
+												class="font-weight-bold form-control form-control-sm"></input>
+											</div>
+										</div>
+										<div class="col">
+											<div class="form-group">
+												<label>Mobile Number 2</label> 
+												<input type="text" name="mobile_number_2" value="" placeholder="max(16) chars" maxlength="16" 
+												class="font-weight-bold form-control form-control-sm"></input>
+											</div>
+										</div>
+										<div class="col">	
+												<div class="form-group">
+													<label>Email</label>
+													<input type="text" name="email" value="" placeholder="max(128) chars" maxlength="128"
+													class="font-weight-bold form-control form-control-sm" />
+												</div>
+										</div>	
+								</div>
+		
+								<div class="row">
+										<div class="col">	
+											<div class="form-group">
+												<label>Gender</label>
+												<select name="gender_lookup_id" class="font-weight-bold form-control form-control-sm">
+														<option value="0">Select Gender</option>
+												</select>
+											</div>
+										</div>
+										<div class="col">	
+												<div class="form-group">
+													<label>Designation</label>
+													<select name="designation_lookup_id" class="font-weight-bold form-control form-control-sm">
+															<option value="0">Select Designation</option>
+													</select>
+												</div>
+										</div>	
+										<div class="col">
+											<div class="form-group">
+												<label>City</label> 
+												<select name="city_id" class="font-weight-bold form-control form-control-sm">
+													<option value="0">Select City</option>
+												</select>
+											</div>
+										</div>
+										<div class="col">
+											<div class="form-group">
+												<label>Country</label>
+												<select name="country_id" class="font-weight-bold form-control form-control-sm" >
+													<option selected value="0">Select Country</option>
+												</select>
+											</div>
+										</div>
+								</div>
+
+								<div class="row">
+										<div class="col">
+											<div class="form-group">
+												<label>Address</label>
+												<textarea  name="address" placeholder="" rows="2" class="font-weight-bold form-control form-control-sm"></textarea>
+											</div>
+										</div>
+										<div class="d-none col">
+												<div class="form-group">
+													<label>Parking Area</label>
+													<select name="parking_area_id" class="font-weight-bold form-control form-control-sm" >
+															<option value="0">Select Parking Area</option>
+													</select>
+												</div>
+										</div>
+										<div class="d-none col">
+											<div class="form-group">
+												<label>Logged In Parking Area Gate</label>
+												<select id="logged_in_parking_area_gate_id" name="logged_in_parking_area_gate_id" class="font-weight-bold form-control form-control-sm" >
+														<option value="0">Select Logged In Parking Area Gate</option>
+												</select>
+											</div>
+									</div>	
+								</div>
+			
+							<div class="row">
+									<div class="col">
+										<div class="form-group">
+											<label>Date Of Birth</label>
+											<input type="date" name="date_of_birth" value=""
+											placeholder="DD/MM/YYYY" Title="Date as DD/MM/YYYY" maxlength="10"
+											class="font-weight-bold form-control form-control-sm"/>
+										</div>
+									</div>
+									<div class="col">	
+											<div class="form-group">
+												<label>Driving License Number</label>
+												<input type="text" name="driving_license_number" value="" placeholder="max(32) chars" maxlength="32"
+												class="font-weight-bold form-control form-control-sm"/>
+											</div>
+									</div>	
+									<div class="col">
+										<div class="form-group">
+											<label>Passport Number</label> 
+											<input type="text" name="passport_number" value="" placeholder="max(32) chars" maxlength="32"
+											class="font-weight-bold form-control form-control-sm"/>
+										</div>
+									</div>
+									<div class="col">
+										<div class="form-group">
+											<label>Date Of Registration</label>
+											<input type="date" name="date_of_registration_date" value=""
+											placeholder="DD/MM/YYYY" Title="Date as DD/MM/YYYY" maxlength="10"
+											class="font-weight-bold form-control form-control-sm"/>
+										</div>
+									</div>
+							</div>
+
+						<div class="row">
+							<div class="col">
+							<div class="form-group">
+								<label>Create By Sys User</label>
+								<select name="create_by_sys_user_id" class="font-weight-bold form-control form-control-sm" >
+										<option value="0">Select Create By Sys User</option>
+								</select>
+								</div>
+							</div>
+							<div class="col">	
+								<div class="form-group">
+									<label>Active</label>
+									<select name="active_lookup_id" class="font-weight-bold form-control form-control-sm" >
+											<option value="0">Select Active</option>
+									</select>
+								</div>
+							</div>
+							<div class="col">
+								<div class="form-group">
+									<label>Status</label>
+									<input type="text" name="status" value="0" placeholder="max(10) digits" maxlength="10"
+									class="font-weight-bold form-control form-control-sm" readonly="true"/>
+								</div>
+							</div>	
+							<div class="col">
+								<div class="form-group">
+									<label>Password</label>
+									<input type="text" name="password" value="" placeholder="max(64) chars" maxlength="64" 
+									class="font-weight-bold form-control form-control-sm"/>
+								</div>
+							</div>
+						</div>	
+
+						<div class="row">
+								<div class="col">
+								<div class="form-group">
+									<label>Salt</label> 
+									<input type="text" name="salt" value="" placeholder="max(64) chars" maxlength="64"
+									class="font-weight-bold form-control form-control-sm"/>
+								</div>
+							</div>	
+							<div class="col">
+								<div class="form-group">
+									<label>Remarks</label>
+									<textarea  name="remarks" placeholder="" rows="2" class="font-weight-bold form-control form-control-sm"></textarea>
+								</div>
+							</div>
+							<div class="d-none col">
+								<div class="form-group">
+									<label>Extra Data</label>
+									<textarea  name="extra_data" placeholder="" rows="2" class="font-weight-bold form-control form-control-sm"></textarea>
+								</div>
+							</div>	
+						</div>		
+
+						</div>
+					</div>
+						</div>
+					</div>
+					<!-- <tr>
+				<td> <label>Latitude</label></td>
+				<td><input type="text" name="latitude" value="" placeholder="max(12) digits" maxlength="12"  class="tbox" /> </td>
+			</tr>
+			<tr>
+				<td> <label>Longitude</label></td>
+				<td><input type="text" name="longitude" value="" placeholder="max(12) digits" maxlength="12"  class="tbox" /> </td>
+			</tr> -->
+
+			<!-- <tr>
+				<td><label></label></td>
+				<td>  date time
+					 class="datepicker" style="width: 80px; margin-left: 0px;" autocomplete="off"/>
+					<input type="text" name="date_of_registration_time" value=""
+							placeholder="HH:MM AM/PM" Title="Time as HH:MM AM/PM" maxlength="8" class="timepicker" style="width: 56px;" autocomplete="off"/>
+				</td>
+			</tr> -->
+
+			<!-- <tr>
+				<td><label>Last Login Date</label></td>
+				<td> date time 
+					<input type="text" name="last_login_date_date" value=""
+							placeholder="DD/MM/YYYY" Title="Date as DD/MM/YYYY" maxlength="10" class="datepicker" style="width: 80px; margin-left: 0px;" autocomplete="off"/>
+					<input type="text" name="last_login_date_time" value=""
+							placeholder="HH:MM AM/PM" Title="Time as HH:MM AM/PM" maxlength="8" class="timepicker" style="width: 56px;" autocomplete="off"/>
+				</td>
+			</tr> -->
+			<!-- <tr>
+				<td> <label>No Of Logins</label></td>
+				<td><input type="text" name="no_of_logins" value="0" placeholder="max(10) digits" maxlength="10"  class="tbox" /> </td>
+			</tr> -->
+		</form>
+	</div>
+	<br> <br>
+
+
+	<div id="edit_sys_user_old_form" class="dialog_window">
+		<form method="post" action="#" class="addForm">
+		<h2>Sys User Old</h2>
+		  <table>
+
+
+			<tr>
+				<td> <label>Sys User Id</label></td>
+				<td><input type="text" name="sys_user_id" value="0" placeholder="max(5) digits" maxlength="5"  class="tbox" /> </td>
+			</tr>
+
+			<tr>
+				<td><label>Role</label></td>
+				<td>
+					<select name="role_id" class="sbox" >
+						<option value="0">Select Role</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td> <label>Name</label></td>
+				<td><input type="text" name="name" value="" placeholder="max(96) chars" maxlength="96"  class="tbox" /> </td>
+			</tr>
+			<tr>
+				<td> <label>Mobile Number</label></td>
+				<td><input type="text" name="mobile_number" value="" placeholder="max(16) chars" maxlength="16"  class="tbox" /> </td>
+			</tr>
+			<tr>
+				<td> <label>Mobile Number 2</label></td>
+				<td><input type="text" name="mobile_number_2" value="" placeholder="max(16) chars" maxlength="16"  class="tbox" /> </td>
+			</tr>
+			<tr>
+				<td> <label>Email</label></td>
+				<td><input type="text" name="email" value="" placeholder="max(96) chars" maxlength="96"  class="tbox" /> </td>
+			</tr>
+
+			<tr>
+				<td><label>Address</label></td>
+				<td>
+					<textarea  name="address" placeholder="" rows="2" class="tarea"></textarea>
+				</td>
+			</tr>
+
+			<tr>
+				<td><label>City</label></td>
+				<td>
+					<select name="city_id" class="sbox" >
+						<option value="0">Select City</option>
+					</select>
+				</td>
+			</tr>
+
+			<tr>
+				<td><label>Country</label></td>
+				<td>
+					<select name="country_id" class="sbox" >
+						<option value="0">Select Country</option>
+					</select>
+				</td>
+			</tr>
+
+			<tr>
+				<td><label>Designation Lookup</label></td>
+				<td>
+					<select name="designation_lookup_id" class="sbox" >
+						<option value="0">Select Designation Lookup</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td> <label>Latitude</label></td>
+				<td><input type="text" name="latitude" value="" placeholder="max(22) digits" maxlength="22"  class="tbox" /> </td>
+			</tr>
+			<tr>
+				<td> <label>Longitude</label></td>
+				<td><input type="text" name="longitude" value="" placeholder="max(22) digits" maxlength="22"  class="tbox" /> </td>
+			</tr>
+
+			<tr>
+				<td><label>Last Login Date</label></td>
+				<td> <!-- date time -->
+					<input type="text" name="last_login_date_date" value=""
+							placeholder="DD/MM/YYYY" Title="Date as DD/MM/YYYY" maxlength="10" class="datepicker" style="width: 80px; margin-left: 0px;" autocomplete="off"/>
+					<input type="text" name="last_login_date_time" value=""
+							placeholder="HH:MM AM/PM" Title="Time as HH:MM AM/PM" maxlength="8" class="timepicker" style="width: 56px;" autocomplete="off"/>
+				</td>
+			</tr>
+			<tr>
+				<td> <label>Properties</label></td>
+				<td><input type="text" name="properties" value="0" placeholder="max(10) digits" maxlength="10"  class="tbox" /> </td>
+			</tr>
+
+			<tr>
+				<td><label>Active Lookup</label></td>
+				<td>
+					<select name="active_lookup_id" class="sbox" >
+						<option value="0">Select Active Lookup</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td> <label>Password</label></td>
+				<td><input type="text" name="password" value="" placeholder="max(64) chars" maxlength="64"  class="tbox" /> </td>
+			</tr>
+			<tr>
+				<td> <label>Salt</label></td>
+				<td><input type="text" name="salt" value="" placeholder="max(64) chars" maxlength="64"  class="tbox" /> </td>
+			</tr>
+
+			<tr>
+				<td><label>Extra Data</label></td>
+				<td>
+					<textarea  name="extra_data" placeholder="" rows="2" class="tarea"></textarea>
+				</td>
+			</tr>
+
+		  </table>
+		</form>
+	</div>
+	<br> <br>
+
+
+	
+	<div id="serverConnection" class="hide_elem">
+		<span><em>&nbsp;&nbsp;</em></span><span id="serverConnection_dialog">Unable
+			to connect Server.!</span><br> <span><em>&nbsp;&nbsp;</em></span><span id="serverConnection_status">Trying in</span><span><em>&nbsp;</em></span><span
+		 id="reconnect_count_down">10</span><span>s.</span><em>&nbsp;</em><a href="#" id="try_connect_server"><span>Try now</span></a>
+	</div>
+
+	<div id="sendEmailForm" class="dialog_window" title="Send Email">
+		<table>
+			<tr>
+				<td>Email ID</td>
+				<td><input name="email" type="text" placeholder="Enter Email Address" value="" style="width: 647px;" /></td>
+			</tr>
+			<tr>
+				<td>Subject</td>
+				<td><input name="subject" type="text" placeholder="Enter Subject" value="" style="width: 647px;" /></td>
+			</tr>
+			<tr>
+				<td>Attachment</td>
+				<td><input name="attachment" type="file" value="" style="width: 649px; border: 1px solid #B5B5B5;" /></td>
+			</tr>
+			<tr>
+				<td colspan="2"><textarea name="message_body" placeholder="Email Body" rows="12" style="width: 725px;"></textarea></td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="checkbox" name="remember"><label>Remember
+						me</label> <img class="ajax_loader_img hide_elem" alt="..Loading" src="images/image_433441.gif" style="position: relative; float: right; top: 5px; right: 5px;"></td>
+			</tr>
+		</table>
+	</div>
+
+	<div id="sendSmsForm" class="dialog_window" title="Send SMS">
+		<table>
+			<tr>
+				<td>Mobile No</td>
+				<td><input name="mobile_no" type="text" placeholder="Enter Mobile Number(s) separated by semi-colon" value="" style="width: 334px;" /></td>
+			</tr>
+			<tr>
+				<td colspan="2"><textarea name="message_body" placeholder="Sms Body" rows="4" style="width: 400px;"></textarea></td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="checkbox" name="remember"><label>Remember
+						me</label></td>
+			</tr>
+		</table>
+	</div>
+
+	<!-- form for Large Text Editor popup -->
+
+	<div id="textEditor" class="dialog_window" title="Edit Text">
+		<textarea class="content" style="width: 300px; height:300px;"  >
+		</textarea>
+	</div>
+
+	<div id="textEditorlatlong" class="dialog_window" title="Edit Text">
+			<textarea class="content" style="width: 300px;"  >
+			</textarea>
+	</div>
+
+	<div id="Socket_response_panel" style="background-color: rgba(183, 232, 255, .9); display: none; min-width: 200px; max-height: 200px; overflow: hidden; position: absolute; right: 10px; bottom: 10px; font-size: 11px;">
+		<div style="width: 100%; height: 15px; border-bottom: 1px solid black;">
+			<span class="close" style="border: 1px solid black; padding: 0px 5px 0px 5px; cursor: pointer; color: red;">x</span>
+			<span class="minimize" style="border: 1px solid black; padding: 0px 5px 0px 5px; cursor: pointer; font-weight: bold;">-</span>
+			<span style="font-weight: bold">Server Message</span>
+		</div>
+		<div class="message_area" style="overflow: auto; min-width: 190px; max-height: 184px; padding: 0px 5px 0px 5px;">
+			<table>
+				<thead>
+					<tr>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	<div id="getLocationForm" class="dialog_window" title="Mark Location">
+		<table>
+			<tr>
+				<td title=" Latitude,longitude">Enter/Paste Latitude and
+					Longitude Here</td>
+			</tr>
+			<tr>
+				<td><input name="lat_long" type="text" placeholder="Enter Latitude, longitude (eg: 12.234444,77.88787)" value=""
+					 style="width: 334px;" /></td>
+			</tr>
+			<tr>
+				<td><a class="_show_on_Map" href="#">Show Map</a></td>
+			</tr>
+		</table>
+	</div>
+	<!-- form for applying plan in passengers -->
+	<!-- form for applying actions/operations in passenger datatable -->
+
+
+
+	<!-- Change password dialog  -->
+	<div id="account_change_password" class="dialog_window" title="Change Password">
+		<table>
+			<tr>
+				<td title="Current Password">Current Password</td>
+				<td><input type="password" name="password" placeholder="Enter Current Password" value=""></td>
+			</tr>
+			<tr>
+				<td title="New Password">New Password</td>
+				<td><input type="password" name="new_password" placeholder="Enter New Password" value=""></td>
+			</tr>
+			<tr>
+				<td title="Confirm New Password">Confirm New Password</td>
+				<td><input type="password" name="confirm_new_password" placeholder="Enter New Password" value=""></td>
+			</tr>
+		</table>
+	</div>
+
+	<!-----------------------Dialog window Ends---------------------------- -->
+
+	<!-- Report form for report Tab -->
+	<div class="addForm _report_form hide_elem">
+		<fieldset>
+			<legend>Report Options</legend>
+			<table>
+				<tbody>
+					<tr>
+						<td>Select Table</td>
+						<td><select name="report_type"></select></td>
+						<td><em>&nbsp;</em></td>
+						<td class="option2_name"></td>
+						<td class="option2_options"></td>
+						<td><button type="button" class="show_report_table" id="show_report_table">Get Report</button></td>
+						<td><img class="ajax_loader_img hide_elem" alt="..Loading" src="images/image_433441.gif" style="position: relative; float: right;"></td>
+					</tr>
+				</tbody>
+			</table>
+		</fieldset>
+	</div>
+
+	<!----------------------- Import data tab content---------------------------- -->
+
+	<!--   popup form content-->
+	<!-- ------------------------------------------------------------------------------ -->
+
+
+
+	<!-- TODO update -->
+	<div id="add_organization_sys_user_map" class="dialog_window">
+		<form method="post" action="#" class="addForm">
+			<table>
+				<tr>
+					<!-- Top -->
+					<td>Show Users</td>
+					<td><select id="show_option" name="show_option">
+							<option value="0">Unassigned</option>
+							<option value="1">Assigned</option>
+							<option value="2">All</option>
+						</select></td>
+					<td><em>&nbsp;</em></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+
+				</tr>
+
+				<!-- Headings -->
+				<tr>
+					<td colspan="2" class="_heading">Users</td>
+					<td><em>&nbsp;</em></td>
+					<td colspan="2" class="_heading">Organizations</td>
+					<td><em>&nbsp;</em></td>
+					<td class="_heading">Allocation Details</td>
+				</tr>
+
+				<tr>
+					<!-- Body -->
+					<td colspan="2" class="_body"><input type="text" name="search_user" class="showToolTip" value="" placeholder="Search User"
+						 title="Search User From List" style="width: 231px; padding-left: 5px;"><br> <select name="sys_user_id" class="show_details"
+						 size="10" multiple="multiple" style="width: 235px;">
+							<option>User 1</option>
+							<option>User 2</option>
+							<option>User 3</option>
+						</select></td>
+					<td><em>&nbsp;</em></td>
+					<td colspan="2" class="_body"><input type="text" name="search_organization_list" value="" placeholder="Search List"
+						 style="width: 211px; padding-left: 5px;"><br> <select name="organization_id" class="show_details" size="10"
+						 style="width: 215px;">
+							<option>Organization 1</option>
+							<option>Organization 2</option>
+							<option>Organization 3</option>
+						</select></td>
+					<td>
+						<button type="button" class="opt_button assign_button">Assign</button>
+						<br> <!-- <button type="button" class="opt_button reassign_button">Reassign</button><br> -->
+						<button type="button" class="opt_button unassign_button">Remove</button>
+					</td>
+					<td class="_body"><select name="assignment_detail" class="show_details" size="11" multiple="multiple" style="min-width: 250px;">
+							<option>User 1: Organization 1</option>
+							<option>User 2: Organization 2</option>
+							<option>User 3: Organization 3</option>
+						</select></td>
+				</tr>
+
+				<tr>
+					<!-- Bottom -->
+
+				</tr>
+			</table>
+		</form>
+	</div>
+
+
+
+
+
+
+	<!--end of body-->
+
+
+
+
+</body>
+
+</html>
+
+

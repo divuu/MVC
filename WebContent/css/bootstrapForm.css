@@ -1,0 +1,222 @@
+.bootstrap-iso #show_purchase_order,
+.bootstrap-iso #show_proforma_invoice,
+.bootstrap-iso #clear_btn{
+    font-size: 0.7rem;
+}
+#clear_btn{
+	line-height: 0.8rem;
+	outline: none;
+}
+#clear_btn:focus{
+	outline: none;
+}
+.bootstrap-iso #show_lc{
+    font-size: 0.7rem;
+    line-height: 1.0;
+}
+.bootstrap-iso .display-4 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.2;
+}
+.bootstrap-iso  .table-responsive{
+    max-height: 35vh;
+}
+.bootstrap-iso  .table-responsive label{
+    margin: 0.25rem 0;
+}
+.bootstrap-iso .table-sm{
+    font-size: 0.8em;
+}
+.bootstrap-iso #edit_commercial_invoice_form .table-sm{
+    font-size: 0.7rem;
+}
+.bootstrap-iso .product-description{
+    width: 15rem;
+}
+.bootstrap-iso .quantity{
+    width: 4rem;
+}
+.bootstrap-iso .amount{
+    width: 4rem;
+}
+
+#messageAddSuccessId .amount,#messageAddSuccessId .quantity{
+	width: auto;
+}
+#generateAllDoc .amount,#generateAllDoc .quantity{
+	width: auto;
+}
+.bootstrap-iso .rate{
+    width: 4rem;
+}
+.bootstrap-iso .table-sm input{
+    font-size: 0.7rem;
+    font-weight: 500;
+}
+.bootstrap-iso .item-row td{
+    border: 1px solid #32383e;
+}
+.bootstrap-iso .table .btn-sm, .table-responsive + .btn-sm{
+    line-height: 0.8;
+}
+.bootstrap-iso .table-fix-head {
+    overflow-y: auto;
+}
+
+.bootstrap-iso .table-fix-head table {
+    border-collapse: collapse;
+}
+
+.bootstrap-iso .table-fix-head th {
+    position: sticky;
+    top: 0;
+}
+.bootstrap-iso{
+    font-size: 0.7rem;
+}
+.bootstrap-iso .form-control-sm{
+    height: calc(1.4rem + 2px);
+    font-size: 0.7rem;
+}
+.bootstrap-iso .col-form-label{
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+}
+
+.bootstrap-iso .background-dialog{
+    background-color: #fcfdfd;
+}
+.bootstrap-iso .h-100 textarea{
+	height: 80%;
+}
+
+.bootstrap-iso #prescription_details_container button:focus{
+	outline: none;
+}
+
+.bootstrap-iso .exporter-textarea{
+    height: 50px
+}
+
+.bootstrap-iso .col-form-label {
+    width: 8rem;
+}
+
+.bootstrap-iso .col-form-label.radio {
+    width: auto;
+}
+.bootstrap-iso .disable-resize{
+    resize: none;
+    overflow-y: hidden;
+}
+
+
+  
+.spin-wrapper {
+position: relative;
+width: 100%;
+height: 25vh;
+}
+.spin-wrapper .spinner {
+position: absolute;
+height: 60px;
+width: 60px;
+border: 3px solid transparent;
+border-top-color: #A04668;
+top: 50%;
+left: 50%;
+margin: -30px;
+border-radius: 50%;
+animation: spin 2s linear infinite;
+
+}
+.spin-wrapper .spinner:before, .spin-wrapper .spinner:after {
+content: '';
+position: absolute;
+border: 3px solid transparent;
+border-radius: 50%;
+}
+.spin-wrapper .spinner:before {
+border-top-color: #254E70;
+top: -12px;
+left: -12px;
+right: -12px;
+bottom: -12px;
+animation: spin 3s linear infinite;
+}
+.spin-wrapper .spinner:after {
+border-top-color: #000;
+top: 6px;
+left: 6px;
+right: 6px;
+bottom: 6px;
+animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+0% {
+    transform: rotate(0deg);
+}
+100% {
+    transform: rotate(360deg);
+}
+}
+
+/* ---------------------------------- */
+.ui-autocomplete {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index: 1000;
+	float: left;
+	display: none;
+	min-width: 160px;
+	max-height: 45vh;
+	overflow-y: auto;
+	overflow-x: hidden; 
+	_width: 160px;
+	padding: 4px 0;
+	margin: 2px 0 0 0;
+	list-style: none;
+	color: #fff;
+	background-color: #fff;
+	border-color: #ccc;
+	border-color: rgba(0, 0, 0, 0.2);
+	border-style: solid;
+	border-width: 1px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding;
+	background-clip: padding-box;
+	*border-right-width: 2px;
+	*border-bottom-width: 2px
+}
+
+.ui-autocomplete .ui-menu-item>a.ui-corner-all {
+	display: block;
+	padding: 3px 15px;
+	clear: both;
+	font-weight: normal;
+	line-height: 18px;
+	color: #555555;
+    white-space: nowrap;
+    font-family: sans-serif;
+}
+
+.ui-autocomplete .ui-menu-item>a.ui-corner-all.ui-state-hover,
+.ui-autocomplete .ui-menu-item>a.ui-corner-all.ui-state-active {
+	color: #ffffff;
+	text-decoration: none;
+	background-color: #007bff;
+	border-radius: 0px;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	background-image: none
+}
+

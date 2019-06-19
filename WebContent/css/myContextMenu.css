@@ -1,0 +1,72 @@
+/* Css for myContestMenu.js*/
+
+
+.ContextMenu, .ContextMenu ul{ /*topmost and sub ULs, respectively*/
+		font: normal 13px Verdana;
+		margin: 0;
+		padding: 0;
+		position: absolute;
+		left: 0;
+		top: 0;
+		list-style-type: none;
+		background: white;
+		border: 1px solid #808080;
+		/* visibility: hidden; */
+		display: none; /*collapse all sub menus to begin with*/
+		box-shadow: 3px 3px 8px #818181; /*shadow for CSS3 capable browsers.*/
+		-webkit-box-shadow: 3px 3px 8px #818181;
+		-moz-box-shadow: 3px 3px 8px #818181;
+		z-index: 10000;
+}
+
+
+.ContextMenu li{
+		position: relative;
+		padding: 1px 0 0 0;
+}
+
+.ContextMenu li a{
+		display: block;
+		width: 160px; /*width of menu (not including side paddings)*/
+		color: black;
+		background: #F7F7F7;
+		text-decoration: none;
+		padding: 5px 10px;
+}
+
+* html .ContextMenu li{ /*IE6 CSS hack*/
+		display: inline-block;
+		width: 170px; /*width of menu (include side paddings of LI A*/
+}
+
+.ContextMenu li a:hover{
+		color: #FFF;
+		background-color: #3399FF;
+}
+/* 
+
+.contextMenu LI.disabled A {
+	color: #AAA;
+	cursor: default;
+}
+
+.contextMenu LI.hover.disabled A {
+	background-color: transparent;
+}
+
+.contextMenu LI.separator {
+	border-top: solid 1px #CCC;
+}
+.rightarrowclass{
+		position: absolute;
+		top: 6px;
+		right: 5px;
+}
+.ContextMenu LI.edit A { background-image: url(../images/page_white_edit.png); }
+.ContextMenu LI.cut A { background-image: url(../images/cut.png); }
+.ContextMenu LI.copy A { background-image: url(../images/page_white_copy.png); }
+.ContextMenu LI.paste A { background-image: url(../images/page_white_paste.png); }
+.ContextMenu LI.delete A { background-image: url(../images/page_white_delete.png); }
+.ContextMenu LI.quit A { background-image: url(../images/door.png); }
+ */
+
